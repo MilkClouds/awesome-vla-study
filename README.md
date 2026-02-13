@@ -162,6 +162,10 @@ A curated reading list of 28 papers on **Vision-Language-Action (VLA) models**, 
 
 ---
 
+## Contributing
+
+Suggestions for papers, resources, or structural improvements are welcome — please open an issue or PR.
+
 ## See Also
 
 - [Awesome-RL-VLA](https://github.com/Denghaoyuan123/Awesome-RL-VLA) — RL for VLA models
