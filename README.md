@@ -10,14 +10,14 @@ A curated reading list of 28 papers on **Vision-Language-Action (VLA) models**, 
 - **Paper presentation**: 1–2 participants per week, 30 min/paper — architecture, training, key results
 - **Discussion**: Compare design choices across the week's papers, discuss limitations and open questions (15–20 min)
 
-| | Phase | Weeks | Topic | Readings |
-|---|-------|-------|-------|----------|
-| 🧮 | **Phase 1** | W1–3 | Generative Model Foundations | MIT 6.S184 course |
-| 🤖 | **Phase 2** | W4–5 | Early Foundation RFMs & Robot Policy | RT-1, RT-2, Octo, OpenVLA, BeT, Diffusion Policy, ACT |
-| 🏗️ | **Phase 3** | W6–7 | Current RFM Architectures | CogACT, GR00T N1, X-VLA, π0, InternVLA-M1 |
-| 💾 | **Phase 4** | W8–9 | Data Scaling | OXE, AgiBot World, UMI, VITRA, Human to Robot Transfer |
-| ⚡ | **Phase 5** | W10–11 | Efficient Inference & Dual-System | RTC, SmolVLA, Helix, Fast-in-Slow |
-| 🎯 | **Phase 6** | W12–13 | RL Fine-tuning & World Model | HIL-SERL, SimpleVLA-RL, π\*0.6, CoT-VLA, UniVLA, Cosmos Policy, DreamZero |
+| Phase | Weeks | Topic | Readings |
+|-------|-------|-------|----------|
+| **Phase 1** | W1–3 | Generative Model Foundations | MIT 6.S184 course |
+| **Phase 2** | W4–5 | Early Foundation RFMs & Robot Policy | RT-1, RT-2, Octo, OpenVLA, BeT, Diffusion Policy, ACT |
+| **Phase 3** | W6–7 | Current RFM Architectures | CogACT, GR00T N1, X-VLA, π0, InternVLA-M1 |
+| **Phase 4** | W8–9 | Data Scaling | OXE, AgiBot World, UMI, VITRA, Human to Robot Transfer |
+| **Phase 5** | W10–11 | Efficient Inference & Dual-System | RTC, SmolVLA, Helix, Fast-in-Slow |
+| **Phase 6** | W12–13 | RL Fine-tuning & World Model | HIL-SERL, SimpleVLA-RL, π\*0.6, CoT-VLA, UniVLA, Cosmos Policy, DreamZero |
 
 ---
 
