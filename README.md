@@ -1,6 +1,6 @@
 # 🦾 Awesome VLA Study
 
-A curated reading list of 28 papers on **Vision-Language-Action (VLA) models**, organized as a 13-week study guide from generative model foundations to RL fine-tuning and world models.
+Getting started with VLA? This guide takes you from the foundations to the frontier — diffusion and flow matching, state-of-the-art robot foundation model architectures, data scaling, RL fine-tuning, and world models. Papers in reading order.
 
 ### 📋 Prerequisites
 - Deep learning fundamentals (Transformers, attention, tokenization)
