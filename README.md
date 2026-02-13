@@ -168,5 +168,6 @@ Suggestions for papers, resources, or structural improvements are welcome — pl
 
 ## See Also
 
+- 🔥 **[vla0-trl](https://github.com/MilkClouds/vla0-trl)** — A complete VLA in ~1,200 lines of Python. Fine-tunes Qwen2.5-VL with TRL's SFTTrainer to predict actions as text, scoring ~90% on LIBERO. Read the entire codebase in an afternoon.
 - [Awesome-RL-VLA](https://github.com/Denghaoyuan123/Awesome-RL-VLA) — RL for VLA models
 - [Awesome-VLA-Robotics](https://github.com/Jiaaqiliu/Awesome-VLA-Robotics) — Large-scale VLA paper collection
