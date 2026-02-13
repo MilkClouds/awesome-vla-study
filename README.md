@@ -1,6 +1,6 @@
 # 🦾 Awesome VLA Study
 
-Getting started with VLA? This guide takes you from the foundations to the frontier — diffusion and flow matching, state-of-the-art robot foundation model architectures, data scaling, RL fine-tuning, and world models. Papers in reading order.
+**Getting started with VLA?** This guide takes you from the foundations to the frontier — diffusion and flow matching, state-of-the-art robot foundation model architectures, data scaling, RL fine-tuning, and world models. Papers in reading order.
 
 ### 📋 Prerequisites
 - Deep learning fundamentals (Transformers, attention, tokenization)
