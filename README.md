@@ -21,7 +21,7 @@ A curated reading list of 28 papers on **Vision-Language-Action (VLA) models**, 
 
 ---
 
-## 🧮 Phase 1: Generative Model Foundations (Weeks 1–3)
+## Phase 1: Generative Model Foundations (Weeks 1–3)
 
 **📚 Core Material**: [MIT 6.S184 — Introduction to Flow Matching and Diffusion Models](https://diffusion.csail.mit.edu/2025/index.html) (Holderrieth & Erives, MIT CSAIL, 2025) | [Course notes paper](https://arxiv.org/abs/2506.02070)
 
@@ -47,7 +47,7 @@ A curated reading list of 28 papers on **Vision-Language-Action (VLA) models**, 
 
 ---
 
-## 🤖 Phase 2: Early Foundation Robot Models & Robot Policy (Weeks 4–5)
+## Phase 2: Early Foundation Robot Models & Robot Policy (Weeks 4–5)
 
 ### Week 4: Early Foundation Robot Models — RT-1, RT-2, Octo, OpenVLA
 | # | Paper | Link | Key Topic |
@@ -72,7 +72,7 @@ A curated reading list of 28 papers on **Vision-Language-Action (VLA) models**, 
 
 ---
 
-## 🏗️ Phase 3: Current RFM Architectures (Weeks 6–7)
+## Phase 3: Current RFM Architectures (Weeks 6–7)
 
 ### Week 6: VLM + Action Head — CogACT, GR00T N1, X-VLA
 | # | Paper | Link | Key Topic |
@@ -95,7 +95,7 @@ A curated reading list of 28 papers on **Vision-Language-Action (VLA) models**, 
 
 ---
 
-## 💾 Phase 4: Data Scaling (Weeks 8–9)
+## Phase 4: Data Scaling (Weeks 8–9)
 
 ### Week 8: Large-Scale Robot Datasets — OXE, AgiBot World
 | # | Paper | Link | Key Topic |
@@ -119,7 +119,7 @@ A curated reading list of 28 papers on **Vision-Language-Action (VLA) models**, 
 
 ---
 
-## ⚡ Phase 5: Efficient Inference & Dual-System (Weeks 10–11)
+## Phase 5: Efficient Inference & Dual-System (Weeks 10–11)
 
 ### Week 10: Fast-Acting VLA — SmolVLA & RTC
 | # | Paper | Link | Key Topic |
@@ -139,7 +139,7 @@ A curated reading list of 28 papers on **Vision-Language-Action (VLA) models**, 
 
 ---
 
-## 🎯 Phase 6: RL Fine-tuning & World Model (Weeks 12–13)
+## Phase 6: RL Fine-tuning & World Model (Weeks 12–13)
 
 ### Week 12: RL Fine-tuning & Human-in-the-Loop — HIL-SERL, SimpleVLA-RL, π*0.6
 | # | Paper | Link | Key Topic |
