@@ -1,27 +1,27 @@
-# Awesome VLA Study
+# 🦾 Awesome VLA Study
 
-A 13-week study guide for **Vision-Language-Action (VLA) models** — 28 papers + 1 course across 6 phases, ordered so each week builds on the last.
+A curated reading list of 28 papers on **Vision-Language-Action (VLA) models**, organized as a 13-week study guide from generative model foundations to RL fine-tuning and world models.
 
-### Prerequisites
+### 📋 Prerequisites
 - Deep learning fundamentals (Transformers, attention, tokenization)
 - Basic probability & optimization (enough to follow ELBO, score matching derivations)
 
-### Weekly Format (Recommended)
+### 💬 Weekly Format (Recommended)
 - **Paper presentation**: 1–2 participants per week, 30 min/paper — architecture, training, key results
 - **Discussion**: Compare design choices across the week's papers, discuss limitations and open questions (15–20 min)
 
-| Phase | Weeks | Topic | Readings |
-|-------|-------|-------|----------|
-| **Phase 1** | W1–3 | Generative Model Foundations | MIT 6.S184 course |
-| **Phase 2** | W4–5 | Early Foundation RFMs & Robot Policy | RT-1, RT-2, Octo, OpenVLA, BeT, Diffusion Policy, ACT |
-| **Phase 3** | W6–7 | Current RFM Architectures | CogACT, GR00T N1, X-VLA, π0, InternVLA-M1 |
-| **Phase 4** | W8–9 | Data Scaling | OXE, AgiBot World, UMI, VITRA, Human to Robot Transfer |
-| **Phase 5** | W10–11 | Efficient Inference & Dual-System | RTC, SmolVLA, Helix, Fast-in-Slow |
-| **Phase 6** | W12–13 | RL Fine-tuning & World Model | HIL-SERL, SimpleVLA-RL, π\*0.6, CoT-VLA, UniVLA, Cosmos Policy, DreamZero |
+| | Phase | Weeks | Topic | Readings |
+|---|-------|-------|-------|----------|
+| 🧮 | **Phase 1** | W1–3 | Generative Model Foundations | MIT 6.S184 course |
+| 🤖 | **Phase 2** | W4–5 | Early Foundation RFMs & Robot Policy | RT-1, RT-2, Octo, OpenVLA, BeT, Diffusion Policy, ACT |
+| 🏗️ | **Phase 3** | W6–7 | Current RFM Architectures | CogACT, GR00T N1, X-VLA, π0, InternVLA-M1 |
+| 💾 | **Phase 4** | W8–9 | Data Scaling | OXE, AgiBot World, UMI, VITRA, Human to Robot Transfer |
+| ⚡ | **Phase 5** | W10–11 | Efficient Inference & Dual-System | RTC, SmolVLA, Helix, Fast-in-Slow |
+| 🎯 | **Phase 6** | W12–13 | RL Fine-tuning & World Model | HIL-SERL, SimpleVLA-RL, π\*0.6, CoT-VLA, UniVLA, Cosmos Policy, DreamZero |
 
 ---
 
-## Phase 1: Generative Model Foundations (Weeks 1–3)
+## 🧮 Phase 1: Generative Model Foundations (Weeks 1–3)
 
 **📚 Core Material**: [MIT 6.S184 — Introduction to Flow Matching and Diffusion Models](https://diffusion.csail.mit.edu/2025/index.html) (Holderrieth & Erives, MIT CSAIL, 2025) | [Course notes paper](https://arxiv.org/abs/2506.02070)
 
@@ -47,7 +47,7 @@ A 13-week study guide for **Vision-Language-Action (VLA) models** — 28 papers 
 
 ---
 
-## Phase 2: Early Foundation Robot Models & Robot Policy (Weeks 4–5)
+## 🤖 Phase 2: Early Foundation Robot Models & Robot Policy (Weeks 4–5)
 
 ### Week 4: Early Foundation Robot Models — RT-1, RT-2, Octo, OpenVLA
 | # | Paper | Link | Key Topic |
@@ -72,7 +72,7 @@ A 13-week study guide for **Vision-Language-Action (VLA) models** — 28 papers 
 
 ---
 
-## Phase 3: Current RFM Architectures (Weeks 6–7)
+## 🏗️ Phase 3: Current RFM Architectures (Weeks 6–7)
 
 ### Week 6: VLM + Action Head — CogACT, GR00T N1, X-VLA
 | # | Paper | Link | Key Topic |
@@ -95,7 +95,7 @@ A 13-week study guide for **Vision-Language-Action (VLA) models** — 28 papers 
 
 ---
 
-## Phase 4: Data Scaling (Weeks 8–9)
+## 💾 Phase 4: Data Scaling (Weeks 8–9)
 
 ### Week 8: Large-Scale Robot Datasets — OXE, AgiBot World
 | # | Paper | Link | Key Topic |
@@ -119,7 +119,7 @@ A 13-week study guide for **Vision-Language-Action (VLA) models** — 28 papers 
 
 ---
 
-## Phase 5: Efficient Inference & Dual-System (Weeks 10–11)
+## ⚡ Phase 5: Efficient Inference & Dual-System (Weeks 10–11)
 
 ### Week 10: Fast-Acting VLA — SmolVLA & RTC
 | # | Paper | Link | Key Topic |
@@ -139,7 +139,7 @@ A 13-week study guide for **Vision-Language-Action (VLA) models** — 28 papers 
 
 ---
 
-## Phase 6: RL Fine-tuning & World Model (Weeks 12–13)
+## 🎯 Phase 6: RL Fine-tuning & World Model (Weeks 12–13)
 
 ### Week 12: RL Fine-tuning & Human-in-the-Loop — HIL-SERL, SimpleVLA-RL, π*0.6
 | # | Paper | Link | Key Topic |
