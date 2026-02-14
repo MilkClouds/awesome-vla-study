@@ -5,6 +5,7 @@
 ### 📋 Prerequisites
 - Deep learning fundamentals (Transformers, attention, tokenization)
 - Basic probability & optimization (enough to follow ELBO, score matching derivations)
+- 💡 *Starting from scratch?* [MIT 6.S191 — Intro to Deep Learning](http://introtodeeplearning.com) covers CNNs, Transformers, and generative models in 5 compact lectures. More courses [below](#-recommended-courses).
 
 ### 💬 Weekly Format (Recommended)
 - **Paper presentation**: 1–2 participants per week, 30 min/paper — architecture, training, key results
@@ -54,7 +55,7 @@
 |---|-------|------|-----------|
 | 1 | **RT-1: Robotics Transformer** — Brohan et al. (2022) | [2212.06817](https://arxiv.org/abs/2212.06817) | First large-scale Robotics Transformer (no VLM) |
 | 2 | **RT-2: Vision-Language-Action Models** — Brohan et al. (2023) | [2307.15818](https://arxiv.org/abs/2307.15818) | VLM backbone → VLA paradigm |
-| 3 | **Octo** — Ghosh et al. (2024) | [2405.12213](https://arxiv.org/abs/2405.12213) | Lightweight open-source diffusion policy (no VLM) |
+| 3 | **Octo** — Ghosh et al. (2024) | [2405.12213](https://arxiv.org/abs/2405.12213) | Open-source generalist policy, modular design, pretrained on OXE (no VLM) |
 | 4 | **OpenVLA** — Kim et al. (2024) | [2406.09246](https://arxiv.org/abs/2406.09246) | First open-source VLM-based VLA |
 
 > 📎 Supplementary video: [Stanford CS25 V3 — Low-level Embodied Intelligence](https://www.youtube.com/watch?v=fz8wf9hN20c)
@@ -65,7 +66,7 @@
 | # | Paper | Link | Key Topic |
 |---|-------|------|-----------|
 | 5 | **Behavior Transformers (BeT)** — Shafiullah et al. (2022) | [2206.11251](https://arxiv.org/abs/2206.11251) | Multimodal action discretization, k-means + offset |
-| 6 | **Diffusion Policy** — Chi et al. (2023) | [2303.04137](https://arxiv.org/abs/2303.04137) | Diffusion for robot control, action chunking |
+| 6 | **Diffusion Policy** — Chi et al. (2023) | [2303.04137](https://arxiv.org/abs/2303.04137) | Diffusion for robot control, action sequence prediction |
 | 7 | **ACT/ALOHA** — Zhao et al. (2023) | [2304.13705](https://arxiv.org/abs/2304.13705) | Action Chunking Transformer, CVAE, bimanual |
 
 **Key points**: Three approaches to the multimodal action problem. Action chunking (predicting K future actions at once) is foundational for later VLA work.
@@ -77,7 +78,7 @@
 ### Week 6: VLM + Action Head — CogACT, GR00T N1, X-VLA
 | # | Paper | Link | Key Topic |
 |---|-------|------|-----------|
-| 8 | **CogACT** — Li et al. (2024) | [2411.19650](https://arxiv.org/abs/2411.19650) | VLM + DiT action head, 55%↑ vs OpenVLA on real robot |
+| 8 | **CogACT** — Li et al. (2024) | [2411.19650](https://arxiv.org/abs/2411.19650) | VLM + DiT action head, action token learning |
 | 9 | **GR00T N1** — Bjorck et al. (2025) | [2503.14734](https://arxiv.org/abs/2503.14734) | 2B diffusion transformer, whole-body humanoid control |
 | 10 | **X-VLA** — Zheng et al. (2025) | [2510.10274](https://arxiv.org/abs/2510.10274) | Soft prompts for cross-embodiment, Florence-Large + flow matching |
 
@@ -101,7 +102,7 @@
 | # | Paper | Link | Key Topic |
 |---|-------|------|-----------|
 | 13 | **Open X-Embodiment (OXE)** — Open X-Embodiment Collaboration (2023) | [2310.08864](https://arxiv.org/abs/2310.08864) | 1M+ trajectories, 22 embodiments, standardized data format |
-| 14 | **AgiBot World** — Bu et al. (2025) | [2503.06669](https://arxiv.org/abs/2503.06669) | 1M+ trajectories, 217 tasks, 100+ scenarios |
+| 14 | **AgiBot World** — Bu et al. (2025) | [2503.06669](https://arxiv.org/abs/2503.06669) | 1M+ trajectories, 217 tasks, 5 deployment scenarios |
 
 > 📎 **Data formats** — Recording-oriented: [rosbag](http://wiki.ros.org/rosbag) (ROS 1), [mcap](https://mcap.dev/) (vendor-neutral, ROS 2 default). Training-oriented: [RLDS](https://github.com/google-research/rlds) (TensorFlow/OXE standard), [LeRobotDataset](https://github.com/huggingface/lerobot) (HuggingFace, Parquet + video).  
 > 📎 [From the Evolution of Rosbag to the Future of AI Tooling](https://rerun.io/blog/rosbag) — by the original rosbag author; covers rosbag V1→V2 → rosbag2 (sqlite3) → MCAP evolution
@@ -112,7 +113,7 @@
 | # | Paper | Link | Key Topic |
 |---|-------|------|-----------|
 | 15 | **UMI** — Chi et al. (2024) | [2402.10329](https://arxiv.org/abs/2402.10329) | Robot-free SE(3) data collection via handheld gripper |
-| 16 | **VITRA** — Li et al. (2025) | [2510.21571](https://arxiv.org/abs/2510.21571) | Human video → VLA training data (1M episodes from Ego4D) |
+| 16 | **VITRA** — Li et al. (2025) | [2510.21571](https://arxiv.org/abs/2510.21571) | Human video → VLA training data (1M episodes from egocentric human videos) |
 | 17 | **Human to Robot Transfer** — Kareer et al. (2025) | [2512.22414](https://arxiv.org/abs/2512.22414) | Human video → robot transfer emerges with VLA scaling |
 
 **Key points**: Three data sources beyond robot teleoperation — UMI (embodiment-agnostic physical demos, <$200 hardware), egocentric video, and exocentric video.
@@ -144,9 +145,9 @@
 ### Week 12: RL Fine-tuning & Human-in-the-Loop — HIL-SERL, SimpleVLA-RL, π*0.6
 | # | Paper | Link | Key Topic |
 |---|-------|------|-----------|
-| 22 | **HIL-SERL** — Luo et al. (2024) | [2410.21845](https://arxiv.org/abs/2410.21845) | Human-in-the-loop RL, 1-2.5h real-world training, near-perfect success |
-| 23 | **SimpleVLA-RL** — Li et al. (2025) | [2509.09674](https://arxiv.org/abs/2509.09674) | RL fine-tuning for AR-based VLA, 99.1% LIBERO SOTA |
-| 24 | **π\*0.6 / Recap** — Physical Intelligence (2025) | [2511.14759](https://arxiv.org/abs/2511.14759) | RL for flow-based VLA, 3-stage pipeline, 90%+ on real tasks |
+| 22 | **HIL-SERL** — Luo et al. (2024) | [2410.21845](https://arxiv.org/abs/2410.21845) | Human-in-the-loop RL, sample-efficient real-world training |
+| 23 | **SimpleVLA-RL** — Li et al. (2025) | [2509.09674](https://arxiv.org/abs/2509.09674) | RL fine-tuning for autoregressive VLA, outcome-based rewards |
+| 24 | **π\*0.6 / Recap** — Physical Intelligence (2025) | [2511.14759](https://arxiv.org/abs/2511.14759) | RL for flow-based VLA, advantage-conditioned, learns from suboptimal data |
 
 **Key points**: Three RL approaches — HIL-SERL (human-in-the-loop, sample-efficient), SimpleVLA-RL (outcome rewards), π\*0.6 (advantage-conditioned, learns from suboptimal data).
 
@@ -155,10 +156,10 @@
 |---|-------|------|-----------|
 | 25 | **CoT-VLA** — Zhao et al. (2025) | [2503.22020](https://arxiv.org/abs/2503.22020) | Visual chain-of-thought reasoning (future image prediction) before action |
 | 26 | **UniVLA** — Wang et al. (2025) | [2506.19850](https://arxiv.org/abs/2506.19850) | Unified AR VLA with world modeling as training objective |
-| 27 | **Cosmos Policy** — Kim et al. (2026) | [2601.16163](https://arxiv.org/abs/2601.16163) | Video foundation model → robot policy, LIBERO 98.5% |
-| 28 | **DreamZero** — Ye et al. (2026) | [dreamzero0.github.io](https://dreamzero0.github.io/) | World Action Model, 2× zero-shot generalization vs SOTA VLAs |
+| 27 | **Cosmos Policy** — Kim et al. (2026) | [2601.16163](https://arxiv.org/abs/2601.16163) | Pretrained video foundation model as robot policy backbone |
+| 28 | **DreamZero** — Ye et al. (2026) | [dreamzero0.github.io](https://dreamzero0.github.io/) | World Action Model, joint world+action generation in latent space |
 
-**Key points**: All four leverage future prediction for better actions. CoT-VLA (visual reasoning before action), UniVLA (world modeling as training signal), Cosmos Policy (pretrained video model → policy), DreamZero (joint world+action prediction).
+**Key points**: Different ways to inject world knowledge into VLAs. CoT-VLA predicts a future image at inference as visual chain-of-thought before acting. UniVLA uses world modeling as an auxiliary training objective (no future prediction at inference). Cosmos Policy repurposes a pretrained video foundation model as the policy backbone. DreamZero jointly generates world states and actions in latent space.
 
 ---
 
@@ -171,3 +172,18 @@ Suggestions for papers, resources, or structural improvements are welcome — pl
 - 🔥 **[vla0-trl](https://github.com/MilkClouds/vla0-trl)** — A complete VLA in ~1,200 lines of Python. Fine-tunes Qwen2.5-VL with TRL's SFTTrainer to predict actions as text, scoring ~90% on LIBERO. Read the entire codebase in an afternoon.
 - [Awesome-RL-VLA](https://github.com/Denghaoyuan123/Awesome-RL-VLA) — RL for VLA models
 - [Awesome-VLA-Robotics](https://github.com/Jiaaqiliu/Awesome-VLA-Robotics) — Large-scale VLA paper collection
+
+---
+
+## 📚 Recommended Courses
+
+Courses covering the prerequisites for this study guide — only those with recent (2022+) video lectures freely available on YouTube. Pick what you need.
+
+| Area | Course | Instructor | Link | Notes |
+|------|--------|------------|------|-------|
+| **DL Fundamentals** | MIT 6.S191: Intro to Deep Learning | Alexander Amini | [introtodeeplearning.com](http://introtodeeplearning.com) · [YouTube '25](https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI) | 5-lecture crash course — CNN, LLM/Transformer, generative models |
+| | Andrej Karpathy: Neural Networks: Zero to Hero | Andrej Karpathy | [karpathy.ai/zero-to-hero.html](https://karpathy.ai/zero-to-hero.html) · [YouTube](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ) | Backprop → GPT, build everything from scratch in code |
+| **Vision** | Stanford CS231n: DL for Computer Vision | Fei-Fei Li et al. | [cs231n.stanford.edu](https://cs231n.stanford.edu) · [YouTube '25](https://www.youtube.com/playlist?list=PLoROMvodv4rOmsNzYBMe0gJY2XS8AQg16) | The canonical CV course — backprop to detection/segmentation/video |
+| | Michigan EECS 498-007: DL for CV | Justin Johnson | [web.eecs.umich.edu/~justincj/teaching/eecs498](https://web.eecs.umich.edu/~justincj/teaching/eecs498/WI2022/) · [YouTube](https://www.youtube.com/playlist?list=PL5-TkQAfAZFbzxjBHtzdVCWE0Zbhomg7r) | CS231n co-creator's version with 6 hands-on assignments |
+| **NLP / Transformers** | Stanford CS224n: NLP with Deep Learning | Christopher Manning | [web.stanford.edu/class/cs224n](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1246/) · [YouTube '24](https://www.youtube.com/playlist?list=PLoROMvodv4rOaMFbaqxPDoLWjDaRAdP9D) | Word vectors → Transformers → LLMs |
+| **RL** | UC Berkeley CS285: Deep RL | Sergey Levine | [rail.eecs.berkeley.edu/deeprlcourse](http://rail.eecs.berkeley.edu/deeprlcourse/) · [YouTube '23](https://www.youtube.com/playlist?list=PL_iWQOsE6TfVYGEGiAOMaOzzv41Jfm_Ps) | Policy gradients, Q-learning, model-based & offline RL — by a leading robotics RL researcher |
