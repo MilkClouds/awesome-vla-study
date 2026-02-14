@@ -18,7 +18,7 @@
 | **Phase 3** | W6–7 | Current RFM Architectures | CogACT, GR00T N1, X-VLA, π0, InternVLA-M1 |
 | **Phase 4** | W8–9 | Data Scaling | OXE, AgiBot World, UMI, VITRA, Human to Robot Transfer |
 | **Phase 5** | W10–11 | Efficient Inference & Dual-System | RTC, SmolVLA, Helix, Fast-in-Slow |
-| **Phase 6** | W12–13 | RL Fine-tuning & World Model | HIL-SERL, SimpleVLA-RL, π\*0.6, CoT-VLA, UniVLA, Cosmos Policy, DreamZero |
+| **Phase 6** | W12–14 | RL Fine-tuning, Reasoning & World Model | HIL-SERL, SimpleVLA-RL, π\*0.6, CoT-VLA, ThinkAct, Fast-ThinkAct, UniVLA, Cosmos Policy, DreamZero |
 
 ---
 
@@ -59,6 +59,8 @@
 | 4 | **OpenVLA** — Kim et al. (2024) | [2406.09246](https://arxiv.org/abs/2406.09246) | First open-source VLM-based VLA |
 
 > 📎 Supplementary video: [Stanford CS25 V3 — Low-level Embodied Intelligence](https://www.youtube.com/watch?v=fz8wf9hN20c)
+
+<!-- TODO: Decision Transformer (Chen et al., 2021, 2106.01345) and Trajectory Transformer (Janner et al., 2021, 2106.02039) — RL as sequence modeling; the conceptual basis for "action as tokens". Consider adding as a supplementary reference. -->
 
 **Key points**: RT-1 (35M, no VLM) → RT-2 (55B VLM, action as text tokens) establishes the VLA concept. Octo (27M–93M, diffusion head, no VLM) and OpenVLA (7B, VLM + 256-bin discretization) are the first open-source generalist robot policies enabling community iteration.
 
@@ -140,7 +142,7 @@
 
 ---
 
-## Phase 6: RL Fine-tuning & World Model (Weeks 12–13)
+## Phase 6: RL Fine-tuning, Reasoning & World Model (Weeks 12–14)
 
 ### Week 12: RL Fine-tuning & Human-in-the-Loop — HIL-SERL, SimpleVLA-RL, π*0.6
 | # | Paper | Link | Key Topic |
@@ -151,15 +153,25 @@
 
 **Key points**: Three RL approaches — HIL-SERL (human-in-the-loop, sample-efficient), SimpleVLA-RL (outcome rewards), π\*0.6 (advantage-conditioned, learns from suboptimal data).
 
-### Week 13: World Model + Reasoning VLA — CoT-VLA, UniVLA, Cosmos Policy, DreamZero
+### Week 13: Reasoning VLA — CoT-VLA, ThinkAct, Fast-ThinkAct
 | # | Paper | Link | Key Topic |
 |---|-------|------|-----------|
 | 25 | **CoT-VLA** — Zhao et al. (2025) | [2503.22020](https://arxiv.org/abs/2503.22020) | Visual chain-of-thought reasoning (future image prediction) before action |
-| 26 | **UniVLA** — Wang et al. (2025) | [2506.19850](https://arxiv.org/abs/2506.19850) | Unified AR VLA with world modeling as training objective |
-| 27 | **Cosmos Policy** — Kim et al. (2026) | [2601.16163](https://arxiv.org/abs/2601.16163) | Pretrained video foundation model as robot policy backbone |
-| 28 | **DreamZero** — Ye et al. (2026) | [dreamzero0.github.io](https://dreamzero0.github.io/) | World Action Model, joint world+action generation in latent space |
+| 26 | **ThinkAct** — Huang et al. (2025) | [2507.16815](https://arxiv.org/abs/2507.16815) | Decouple reasoning from execution; RL grounds plan quality in task success, not language supervision |
+| 27 | **Fast-ThinkAct** — Huang et al. (2026) | [2601.09708](https://arxiv.org/abs/2601.09708) | Text-level CoT dispensable — latent distillation preserves planning capacity at ~10× speed |
 
-**Key points**: Different ways to inject world knowledge into VLAs. CoT-VLA predicts a future image at inference as visual chain-of-thought before acting. UniVLA uses world modeling as an auxiliary training objective (no future prediction at inference). Cosmos Policy repurposes a pretrained video foundation model as the policy backbone. DreamZero jointly generates world states and actions in latent space.
+> 📎 Fast-ThinkAct's reasoning compression is orthogonal to Week 10's model compression (SmolVLA, RTC) — the two can stack.
+
+**Key points**: Reasoning representation — image tokens (CoT-VLA) vs. visual latent (ThinkAct) vs. compressed latent tokens (Fast-ThinkAct). ThinkAct grounds reasoning in task-outcome RL instead of language supervision. Fast-ThinkAct shows planning structure, not verbosity, carries the signal (~10× faster, performance preserved).
+
+### Week 14: World Model — UniVLA, Cosmos Policy, DreamZero
+| # | Paper | Link | Key Topic |
+|---|-------|------|-----------|
+| 28 | **UniVLA** — Wang et al. (2025) | [2506.19850](https://arxiv.org/abs/2506.19850) | Unified AR VLA with world modeling as training objective |
+| 29 | **Cosmos Policy** — Kim et al. (2026) | [2601.16163](https://arxiv.org/abs/2601.16163) | Pretrained video foundation model as robot policy backbone |
+| 30 | **DreamZero** — Ye et al. (2026) | [dreamzero0.github.io](https://dreamzero0.github.io/) | World Action Model, joint world+action generation in latent space |
+
+**Key points**: Three ways to leverage world knowledge — training regularizer (UniVLA, no world prediction at inference), pretrained video FM as policy backbone (Cosmos Policy), joint world+action generation in latent space (DreamZero).
 
 ---
 
