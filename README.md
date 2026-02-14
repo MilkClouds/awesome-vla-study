@@ -3,9 +3,9 @@
 **Getting started with VLA?** This guide takes you from the foundations to the frontier — diffusion and flow matching, state-of-the-art robot foundation model architectures, data scaling, RL fine-tuning, and world models. Papers in reading order.
 
 ### 📋 Prerequisites
-- Deep learning fundamentals (Transformers, attention, tokenization)
 - Basic probability & optimization (enough to follow ELBO, score matching derivations)
-- 💡 *Starting from scratch?* [MIT 6.S191 — Intro to Deep Learning](http://introtodeeplearning.com) covers CNNs, Transformers, and generative models in 5 compact lectures. More courses [below](#-recommended-courses).
+- Deep learning fundamentals (Transformers, attention, tokenization)
+  - 💡 *Starting from scratch?* [MIT 6.S191 — Intro to Deep Learning](http://introtodeeplearning.com) covers CNNs, Transformers, and generative models in a 1-week intensive bootcamp. More courses [below](#-recommended-courses).
 
 ### 💬 Weekly Format (Recommended)
 - **Paper presentation**: 1–2 participants per week, 30 min/paper — architecture, training, key results
@@ -177,13 +177,12 @@ Suggestions for papers, resources, or structural improvements are welcome — pl
 
 ## 📚 Recommended Courses
 
-Courses covering the prerequisites for this study guide — only those with recent (2022+) video lectures freely available on YouTube. Pick what you need.
+Courses covering the prerequisites for this study guide — only those with recent (2023+) video lectures freely available on YouTube. Pick what you need.
 
 | Area | Course | Instructor | Link | Notes |
 |------|--------|------------|------|-------|
-| **DL Fundamentals** | MIT 6.S191: Intro to Deep Learning | Alexander Amini | [introtodeeplearning.com](http://introtodeeplearning.com) · [YouTube '25](https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI) | 5-lecture crash course — CNN, LLM/Transformer, generative models |
+| **DL Fundamentals** | MIT 6.S191: Intro to Deep Learning | Alexander Amini | [introtodeeplearning.com](http://introtodeeplearning.com) · [YouTube '25](https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI) | 1-week bootcamp (10 lectures) — CNN, Transformer, generative models, RL |
 | | Andrej Karpathy: Neural Networks: Zero to Hero | Andrej Karpathy | [karpathy.ai/zero-to-hero.html](https://karpathy.ai/zero-to-hero.html) · [YouTube](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ) | Backprop → GPT, build everything from scratch in code |
 | **Vision** | Stanford CS231n: DL for Computer Vision | Fei-Fei Li et al. | [cs231n.stanford.edu](https://cs231n.stanford.edu) · [YouTube '25](https://www.youtube.com/playlist?list=PLoROMvodv4rOmsNzYBMe0gJY2XS8AQg16) | The canonical CV course — backprop to detection/segmentation/video |
-| | Michigan EECS 498-007: DL for CV | Justin Johnson | [web.eecs.umich.edu/~justincj/teaching/eecs498](https://web.eecs.umich.edu/~justincj/teaching/eecs498/WI2022/) · [YouTube](https://www.youtube.com/playlist?list=PL5-TkQAfAZFbzxjBHtzdVCWE0Zbhomg7r) | CS231n co-creator's version with 6 hands-on assignments |
 | **NLP / Transformers** | Stanford CS224n: NLP with Deep Learning | Christopher Manning | [web.stanford.edu/class/cs224n](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1246/) · [YouTube '24](https://www.youtube.com/playlist?list=PLoROMvodv4rOaMFbaqxPDoLWjDaRAdP9D) | Word vectors → Transformers → LLMs |
 | **RL** | UC Berkeley CS285: Deep RL | Sergey Levine | [rail.eecs.berkeley.edu/deeprlcourse](http://rail.eecs.berkeley.edu/deeprlcourse/) · [YouTube '23](https://www.youtube.com/playlist?list=PL_iWQOsE6TfVYGEGiAOMaOzzv41Jfm_Ps) | Policy gradients, Q-learning, model-based & offline RL — by a leading robotics RL researcher |
